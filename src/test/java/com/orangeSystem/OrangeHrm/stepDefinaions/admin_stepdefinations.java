@@ -36,7 +36,9 @@ public class admin_stepdefinations {
         CommonUtlis.insertText("xpath", adminObjectRepo.getObjects().getProperty("tax_id"), tax_id);
         CommonUtlis.clearText("id", adminObjectRepo.getObjects().getProperty("phone_n0_id"));
         CommonUtlis.insertText("id", adminObjectRepo.getObjects().getProperty("phone_n0_id"), phone);
+        CommonUtlis.clearText("id", adminObjectRepo.getObjects().getProperty("naics_id"));
         CommonUtlis.insertText("id", adminObjectRepo.getObjects().getProperty("naics_id"), naics);
+        CommonUtlis.clearText("id", adminObjectRepo.getObjects().getProperty("fax_id"));
         CommonUtlis.insertText("id", adminObjectRepo.getObjects().getProperty("fax_id"), fax);
     }
 
