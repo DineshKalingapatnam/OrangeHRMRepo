@@ -2,9 +2,11 @@ package com.orangeSystem.OrangeHrm.Utils;
 
 import com.orangeSystem.OrangeHrm.Configuration.BaseConfiguration;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 public class CommonUtlis extends BaseConfiguration {
 
@@ -121,7 +123,27 @@ public class CommonUtlis extends BaseConfiguration {
 
     }
 
+    public static void clickOnButton(WebElement element) {
+        try {
+            if (element.isDisplayed()) {
+                element.click();
+            }
+        } catch (NoSuchElementException exe) {
+            Assert.fail(exe.getMessage() + " exception occured.");
+        }
 
+    }
+
+    public static void enterTextInTextBox(WebElement element, String text) {
+        try {
+            if (element.isDisplayed()) {
+                element.clear();
+                element.sendKeys(text);
+            }
+        } catch (NoSuchElementException exe) {
+            Assert.fail(exe.getMessage() + " exception occured.");
+        }
+    }
 }
 
 

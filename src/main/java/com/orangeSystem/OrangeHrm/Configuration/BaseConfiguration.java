@@ -11,11 +11,11 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class BaseConfiguration {
-    public FileInputStream fis;
-    public Properties prop;
+    public static FileInputStream fis;
+    public static Properties prop;
     public static WebDriver driver;
 
-    public void invokeBrowser() {
+    public static void invokeBrowser() {
 
         try {
 
